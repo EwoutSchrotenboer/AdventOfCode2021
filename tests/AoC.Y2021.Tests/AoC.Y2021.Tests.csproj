@@ -18,4 +18,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AoC.Common\AoC.Common.csproj" />
+    <ProjectReference Include="..\..\src\AoC.Y2021\AoC.Y2021.csproj" />
+  </ItemGroup>
+
 </Project>

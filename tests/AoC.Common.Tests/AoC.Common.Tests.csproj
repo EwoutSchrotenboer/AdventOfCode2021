@@ -18,4 +18,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AoC.Common\AoC.Common.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -4,7 +4,7 @@ namespace AoC.Common;
 
 public abstract class DayBase
 {
-    internal readonly PuzzleInput _puzzleInput;
+    protected readonly PuzzleInput _puzzleInput;
 
     public DayBase(PuzzleInput puzzleInput)
     {

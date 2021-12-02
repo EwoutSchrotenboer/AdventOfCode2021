@@ -4,7 +4,10 @@
 root = true
 # All files
 [*]
+charset = utf-8
 indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = true
 
 # XML project files
 [*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,projitems,shproj}]
@@ -18,7 +21,10 @@ indent_size = 2
 [*.{cs,csx,vb,vbx}]
 indent_size = 4
 insert_final_newline = true
-charset = utf-8-bom
+
+[*.md]
+trim_trailing_whitespace = false
+indent_size = 2
 
 ###############################
 # .NET Coding Conventions     #

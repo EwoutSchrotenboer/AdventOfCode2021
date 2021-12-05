@@ -82,4 +82,6 @@ public class Position : IEquatable<Position>
         Equals(obj as Position);
 
     public override int GetHashCode() => 397 ^ X ^ Y ^ Z ^ W;
+
+    public override string ToString() => $"({X},{Y},{Z},{W}";
 }

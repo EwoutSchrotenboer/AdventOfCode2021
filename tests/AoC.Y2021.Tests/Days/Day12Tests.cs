@@ -9,14 +9,15 @@ namespace AoC.Y2021.Tests.Days;
 public class Day12Tests
 {
     private readonly PuzzleInputProvider _puzzleInputProvider = new();
-    private readonly PuzzleInput _testInput = new(new List<string>());
+
+    private readonly PuzzleInput _testInput = new(new List<string> { "fs-end", "he-DX", "fs-he", "start-DX", "pj-DX", "end-zg", "zg-sl", "zg-pj", "pj-he", "RW-he", "fs-DX", "pj-RW", "zg-RW", "start-pj", "he-WI", "zg-he", "pj-fs", "start-RW" });
 
     [Fact]
     public void PartOneTest()
     {
         var target = new Day12(_testInput);
         var actual = target.PartOne();
-        Assert.Equal(-1, actual);
+        Assert.Equal(226, actual);
     }
 
     [Fact]
@@ -25,7 +26,7 @@ public class Day12Tests
         var input = await _puzzleInputProvider.GetAsync(2021, 12);
         var target = new Day12(input);
         var actual = target.PartOne();
-        Assert.Equal(-1, actual);
+        Assert.Equal(4413, actual);
     }
 
     [Fact]
@@ -33,7 +34,7 @@ public class Day12Tests
     {
         var target = new Day12(_testInput);
         var actual = target.PartTwo();
-        Assert.Equal(-1, actual);
+        Assert.Equal(3509, actual);
     }
 
     [Fact]
@@ -42,6 +43,6 @@ public class Day12Tests
         var input = await _puzzleInputProvider.GetAsync(2021, 12);
         var target = new Day12(input);
         var actual = target.PartTwo();
-        Assert.Equal(-1, actual);
+        Assert.Equal(118803, actual);
     }
 }

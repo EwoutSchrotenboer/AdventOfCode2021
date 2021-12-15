@@ -39,8 +39,8 @@ public class Day04 : DayBase
 public class Bingoboard
 {
     public bool Complete { get; private set; }
-    private readonly Dictionary<int, Position> _spaces = new();
-    private readonly Dictionary<int, Position> _called = new();
+    private readonly Dictionary<int, (int x, int y)> _spaces = new();
+    private readonly Dictionary<int, (int x, int y)> _called = new();
 
     public Bingoboard(List<string> input)
     {
@@ -50,7 +50,7 @@ public class Bingoboard
 
             for (int x = 0; x < rowItems.Length; x++)
             {
-                _spaces.Add(int.Parse(rowItems[x]), new Position(x, y));
+                _spaces.Add(int.Parse(rowItems[x]), (x, y));
             }
         }
     }
@@ -73,7 +73,7 @@ public class Bingoboard
 
         for (int i = 0; i < 5; i++)
         {
-            if (calledSpaces.Count(v => v.X == i) == 5 || calledSpaces.Count(v => v.Y == i) == 5)
+            if (calledSpaces.Count(v => v.x == i) == 5 || calledSpaces.Count(v => v.y == i) == 5)
             {
                 Complete = true;
                 return (true, GetSumOfUncalled());

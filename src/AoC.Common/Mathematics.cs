@@ -34,4 +34,12 @@ public static class Mathematics
 
     public static long Lcm(this IEnumerable<long> numbers) =>
         numbers.Aggregate(Lcm);
+
+    public static double Hypotenuse(params int[] numbers) => Math.Sqrt(numbers.Sum(n => Math.Pow(n, 2)));
+    public static double Hypotenuse(params long[] numbers) => Math.Sqrt(numbers.Sum(n => Math.Pow(n, 2)));
+    public static int Min(params int[] numbers) => numbers.Min();
+    public static long Min(params long[] numbers) => numbers.Min();
+    public static long Max(params int[] numbers) => numbers.Max();
+    public static long Max(params long[] numbers) => numbers.Max();
+
 }

@@ -9,14 +9,14 @@ namespace AoC.Y2021.Tests.Days;
 public class Day23Tests
 {
     private readonly PuzzleInputProvider _puzzleInputProvider = new();
-    private readonly PuzzleInput _testInput = new(new List<string>());
+    private readonly PuzzleInput _testInput = new(new List<string> { "#############", "#...........#", "###B#C#B#D###", "  #A#D#C#A#", "  #########", });
 
     [Fact]
     public void PartOneTest()
     {
         var target = new Day23(_testInput);
         var actual = target.PartOne();
-        Assert.Equal(-1, actual);
+        Assert.Equal(12521, actual);
     }
 
     [Fact]
@@ -25,7 +25,7 @@ public class Day23Tests
         var input = await _puzzleInputProvider.GetAsync(2021, 23);
         var target = new Day23(input);
         var actual = target.PartOne();
-        Assert.Equal(-1, actual);
+        Assert.Equal(16489, actual);
     }
 
     [Fact]
@@ -33,7 +33,7 @@ public class Day23Tests
     {
         var target = new Day23(_testInput);
         var actual = target.PartTwo();
-        Assert.Equal(-1, actual);
+        Assert.Equal(44169, actual);
     }
 
     [Fact]
@@ -42,6 +42,6 @@ public class Day23Tests
         var input = await _puzzleInputProvider.GetAsync(2021, 23);
         var target = new Day23(input);
         var actual = target.PartTwo();
-        Assert.Equal(-1, actual);
+        Assert.Equal(43413, actual);
     }
 }
